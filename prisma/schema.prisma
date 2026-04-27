@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model IntraEstimate {
+  idx               Int       @id @default(autoincrement())
+  section_name      String?   @db.VarChar(20)
+  name              String?   @db.VarChar(20)
+  phone             String?   @db.VarChar(30)
+  naverid           String?   @db.VarChar(100)
+  cafenick          String?   @db.VarChar(100)
+  etc               String?   @db.Text
+  estimate_type     String?   @db.VarChar(5)
+  status            String?   @default("접수") @db.VarChar(10)
+  counseling_type   String?   @db.VarChar(50)
+  s_date            DateTime? @db.Date
+  s_time            String?   @db.VarChar(50)
+  counseling_result String?   @db.VarChar(255)
+  regdate           DateTime  @default(now())
+  etc1              String?   @db.VarChar(255)
+  etc2              String?   @db.VarChar(255)
+  etc3              String?   @db.VarChar(255)
+  etc4              String?   @db.VarChar(255)
+  wdate             String?   @db.VarChar(20)
+  etc_type          String?   @db.VarChar(50)
+  del_yn            String?   @default("N") @db.Char(1)
+  office_member_id  Int?
+
+  @@map("intra_estimate")
+}
