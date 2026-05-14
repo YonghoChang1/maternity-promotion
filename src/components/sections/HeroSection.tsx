@@ -70,15 +70,6 @@ export function HeroSection() {
               {c.ctaSub}
             </span>
           </div>
-
-          <div className="hero-trust reveal reveal-delay-3">
-            {c.trust.map((t) => (
-              <div key={t.lbl} className="hero-trust-item">
-                <span className="num">{t.num}</span>
-                <span className="lbl">{t.lbl}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 

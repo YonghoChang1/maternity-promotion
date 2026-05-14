@@ -18,8 +18,8 @@ export default function ExpectingPage() {
     <>
       <HeroSection />
       <EmpathySection />
-      <PlannerSection />
       <OfferSection />
+      <PlannerSection />
       <GallerySection />
       <FaqSection />
       <FormSection />
